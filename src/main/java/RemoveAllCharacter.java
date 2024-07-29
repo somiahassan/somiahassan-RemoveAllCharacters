@@ -12,6 +12,10 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        if (ch == null || ch.length() != 1) {
+            throw new IllegalArgumentException("The 'ch' parameter must be a single character.");
+        }
+        // Replace all occurrences of 'ch' with an empty string
+        return str.replace(ch, "");
     }
 }
